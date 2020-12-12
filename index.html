@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="jinkela" content="auto=true" />
+    <title>Web 技术研究所（废墟）</title>
+    <script src="https://cdn.jsdelivr.net/npm/jinkela@1.3.7/umd.min.js"></script>
+    <script>
+    class Main extends Jinkela {
+      get template() {
+        return `
+          <main>
+            <blockquote>
+              <p>由于有评论功能，整天有傻 x 在这里刷广告（无法理解），导致维护起来很累。
+              而且这个博客都是好几年前的文章了，技术基本都是过时的，没意思。</p>
+              <p>希望联系我可以直接戳，QQ&微信：576398868</p>
+            </blockquote>
+          </main>
+        `;
+      }
+      get styleSheet() {
+        return `
+          body {
+            margin: 1em;
+          }
+          :scope {
+            font-size: 14px;
+            max-width: 600px;
+            margin: auto;
+            blockquote {
+              padding: 0;
+              margin: 0;
+              &::after {
+                display: block;
+                text-align: right;
+                content: 'by 次碳酸钴';
+              }
+            }
+            hr {
+              border: 0;
+              height: 1px;
+              background: #ddd;
+            }
+            aside {
+              font-size: 12px;
+              a {
+                color: #409eff;
+                text-decoration: none;
+                white-space: nowrap;
+                margin-right: 1em;
+              }
+            }
+          }
+        `;
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <jkl-main></jkl-main>
+  </body>
+</html>
